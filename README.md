@@ -1,8 +1,19 @@
 ### Hi there 👋
 
-This is the source code to Ye Zheng's public website: https://zhengyeah.cn/. 
+This is the source code to Ye Zheng's public website: http://zhengyeah.cn/. 
 
 Feel free to clone this code for your own personal use.
+
+![](/images/screen-webiste.png)
+
+### Features
+
+This website is designed for personal academic homepage, with the following features:
+
+* Responsive design: different layouts on different screen sizes;
+* Well-designed layouts: elements' sizes, margins, and paddings are fine-tuned;
+* Simple and structural code template: using table layout, codes are modularied and easy to extend. 
+
 
 <!--
 **ZhengYeah/ZhengYeah** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
