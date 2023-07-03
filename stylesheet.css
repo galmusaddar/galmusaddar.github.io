@@ -1,124 +1,356 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 a {
-    color: #1772d0;
+    color: #1772D0;
     text-decoration: none;
 }
 
-a:focus,
 a:hover {
     color: #D0104C;
+    text-decoration: underline;
+}
+
+body {
+    font-family: system-ui, segoe ui, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    margin: 0
+}
+
+/******************** header ********************/
+
+.header {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: #F5F5F5;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+.navigation-bar {
+    max-width: 1040px;
+    margin: 0 auto;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navigation-bar a {
+    text-decoration: none;
+    color: #212121;
+    padding: 10px 0;
+}
+
+.my-name {
+    font-weight: bold;
+}
+
+.link-collection ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+}
+
+.link-collection li {
+    padding: 0 20px;
+    white-space: nowrap;
+}
+
+.link-collection li:last-child {
+    padding: 0 0 0 20px;
+    white-space: nowrap;
+}
+
+.link-collection li a:hover {
+    border-bottom: 3px solid #D0104C;
+    color: #D0104C;
+}
+
+@media only screen and (max-width: 860px) {
+    .link-collection {
+        display: none;
+    }
+}
+
+/* mobile menu button */
+.mobile-menu-button {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 861px) {
+    .mobile-menu-button {
+        display: none;
+    }
+
+    .mobile-overlay {
+        opacity: 0;
+        height: 0;
+    }
+}
+
+.menu-button > div {
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 5px 0;
+    transition: 0.3s;
+    transform-origin: 0 50%;
+}
+
+.on-click-menu-button > div {
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 7px 0;
+    transition: 0.3s;
+    transform-origin: 0 50%;
+}
+
+.on-click-menu-button > div:first-child {
+    transform: rotate(45deg);
+    background-color: #D0104C;
+}
+
+.on-click-menu-button > div:nth-child(2) {
+    opacity: 0;
+    background-color: #D0104C;
+}
+
+.on-click-menu-button > div:nth-child(3) {
+    transform: rotate(-45deg);
+    background-color: #D0104C;
+}
+
+/* mobile menu list */
+.mobile-overlay {
+    height: 0;
+    position: fixed;
+    z-index: 1;
+    margin-top: 70px;
+    right: 20px;
+    opacity: 0;
+    top: 0;
+    background-color: #F5F5F5;
+    box-shadow: rgba(0, 0, 0, 0.10) -1px 1px 4px, rgba(0, 0, 0, 0.1) 1px 1px 4px;
+    transition: 0.3s;
+    overflow-y: hidden;
+}
+
+.mobile-overlay-list {
+    font-size: 20px;
+}
+
+.mobile-overlay-list a {
+    text-decoration: none;
+    color: #212121;
+    display: block;
+    padding: 0 24px;
+}
+
+.mobile-overlay-list a:hover {
+    color: #D0104C;
+}
+
+.mobile-overlay-list ul {
+    margin: 0;
+    padding: 5px;
+}
+
+.mobile-overlay-list li {
+    display: block;
+    border-bottom: 2px solid #E0E0E0;
+    padding: 16px 0;
+}
+
+.mobile-overlay-list li:last-child {
+    border-bottom: none;
+}
+
+/******************** bio and profile ********************/
+
+#pc-bio-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#pc-bio-profile .bio {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-around;
+}
+
+#pc-bio-profile .profile {
+    display: flex;
+    max-width: 200px;
+    margin: 0 0 0 50px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profile img {
+    width: 100%;
+    border: 2px solid #FCFAF2;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 650px) {
+    #pc-bio-profile .bio {
+        width: 100%;
+    }
+
+    #pc-bio-profile .profile {
+        display: none
+    }
+}
+
+.mobile-profile {
+    width: 80%;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+.mobile-profile img {
+    max-width: 225px;
+    width: 100%;
+    border-radius: 50%;
+    border: 2px solid #FCFAF2;
+}
+
+@media screen and (min-width: 651px) {
+    .mobile-profile {
+        display: none;
+    }
+}
+
+.button-links {
+    font-size: 13px;
+    padding: 0 4px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.button-links:hover {
+    color: #FFFFFF;
+    background-color: #D0104C;
+    border-color: #D0104C;
     text-decoration: none;
 }
 
-/*Font family comes from GitHub*/
-body,
-td,
-th,
-tr,
-p,
-a {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
-    font-size: 16px
+/******************** heading block ********************/
+
+.layout-level-1 {
+    width: 100%;
+    max-width: 860px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 90px
 }
 
-strong {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
-    font-size: 16px;
+.layout-level-2 {
+    padding: 10px 20px;
 }
 
 .heading {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
     font-size: 24px;
+    border-bottom: 1px solid #F2F2F2;
+    padding: 8px 0;
 }
 
-.heading-grey {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
-    font-size: 24px;
-    color: lightgrey;
+.paper-entry {
+    margin-top: 40px;
 }
 
-.heading-grey:focus,
-.heading-grey:hover {
-    color: #D0104C;
-    text-decoration: none;
-}
-
-.table-level-1 {
-    width: 100%;
-    max-width: 860px;
-    border: 0;
-    border-spacing: 0;
-    border-collapse: separate;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 30px
-}
-
-.table-level-2 {
-    width: 100%;
-    border: 0;
-    border-spacing: 0;
-    border-collapse: separate;
-    margin-right: auto;
-    margin-left: auto;
+.bio-list .paper-entry:first-child,
+.publications-list .paper-entry:first-child,
+.writings-list .paper-entry:first-child,
+.awards-list .paper-entry:first-child,
+.archives-list .paper-entry:first-child {
+    margin-top: 20px;
 }
 
 .paper-title {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 700
 }
 
-.my-name {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
-    font-size: 32px;
-    margin-top: 10px;
-    margin-bottom: 40px;
+.highlight-entry {
+    background-color: #FCFAF2;
 }
 
-#bio-profile .bio {
-    padding: 20px;
-    width: 65%;
-    vertical-align: middle
+#category-more-bio ul li,
+#category-awards ul li {
+    margin-bottom: 16px;
 }
 
-#bio-profile .profile {
-    padding: 20px 25px 20px 20px;
-    width: 30%;
-    max-width: 30%
+/******************** footer ********************/
+
+#footer {
+    background-color: #F5F5F5;
+    margin-top: 40px;
 }
 
-td .td-whole-line {
-    padding: 20px;
-    width: 100%;
-    vertical-align: middle
+#footer .split-line {
+    max-width: 100%;
+    margin: auto;
+    border: 0;
+    padding: 1px;
+    background: repeating-linear-gradient(to right, lightgrey 0, lightgrey 3px, transparent 0, transparent 12px);
 }
 
-@media (max-width: 860px) {
-    #bio-profile .bio {
-        padding: 20px;
-        width: 100%;
-        vertical-align: middle
+#footer .footer-box {
+    width: 1040px;
+    max-width: 100%;
+    margin: auto;
+    padding: 10px 0 20px;
+    font-size: 12px;
+    color: dimgrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-left {
+    max-width: 30%;
+    margin-left: 20px;
+}
+
+.footer-right {
+    text-align: right;
+    max-width: 45%;
+    margin-right: 20px;
+}
+
+/******************** mobile layout ********************/
+
+@media screen and (max-width: 450px) {
+    .layout-level-2 {
+        padding: 10px 15px;
     }
-
-    #bio-profile .profile {
-        display: none
+    .footer-left {
+        margin-left: 15px;
     }
-}
-
-@media (max-width: 420px) {
-    td .td-whole-line {
-        padding: 20px 10px;
-        width: 100%;
-        vertical-align: middle
+    .footer-right {
+        margin-right: 15px;
     }
-
-    #bio-profile .bio {
-        padding: 20px 10px;
-        width: 100%;
-        vertical-align: middle
+    .navigation-bar {
+        padding: 0 15px;
     }
-
-    #bio-profile .profile {
-        display: none
+    .mobile-overlay {
+        right: 15px;
+    }
+    #pc-bio-profile .bio {
+        height: auto;
+    }
+    #pc-bio-profile .bio > div {
+        margin: 10px 0;
     }
 }

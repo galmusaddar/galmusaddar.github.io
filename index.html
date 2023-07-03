@@ -3,212 +3,225 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Ye Zheng</title>
+    <title>Ghadeer Almusaddar</title>
 
-    <meta content="Ye Zheng" name="author">
+    <meta content="Ghadeer Almusaddar" name="author">
     <meta content="width=device-width, initial-scale=1" name="viewport">
 
     <link href="stylesheet.css" rel="stylesheet" type="text/css">
-    <link href="/images/web-icon.svg" rel="icon">
+    <!--<link href="/images/web-icon.svg" rel="icon">-->
 </head>
 
 <body>
-<table class="table-level-1">
-    <tbody>
-    <tr>
-        <td>
-            <!--whole page table starts here-->
+<section class="header">
+    <div class="navigation-bar">
+        <div class="my-name">
+            <a href="https://ghadeer.github.io">Ghadeer Almusaddar</a>
+        </div>
+        <div class="link-collection">
+            <ul>
+                <li><a href="#category-publications">Publications</a></li>
+                <li><a href="#category-blog">Blog</a></li>
+                <!--<li><a href="#category-archives">Archives</a></li>-->
+            </ul>
+        </div>
+        <div class="mobile-menu-button">
+            <div class="menu-button">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mobile-overlay">
+    <div class="mobile-overlay-list">
+        <ul>
+            <li><a href="#category-publications">Publications</a></li>
+            <li><a href="#category-blog">Blog</a></li>
+            <!--<li><a href="#category-archives">Archives</a></li>-->
+        </ul>
+    </div>
+</section>
 
-            <table class="table-level-2">
-                <tbody>
-                <tr id="bio-profile">
-                    <td class="bio">
-                        <p class="my-name">
-                            Ye Zheng (郑烨)
-                        </p>
-                        <p>
-                            I am currently a master student majoring in Software Engineering at Shenzhen University,
-                            supervised by
-                            <a href="https://csse.szu.edu.cn/pages/user/index?id=1031"> Dr. Jiaxiang Liu</a>.
-                        </p>
-                        <p>
-                            Now I focus mainly on formal verification. Specifically, my research topic is neural network
-                            verification.
-                        </p>
-                        <p>
-                            <a href="data/YeZheng-resume.pdf">Resume</a> &nbsp-&nbsp
-                            <a href="https://scholar.google.com/citations?user=fIwzSr4AAAAJ">Google Scholar</a>&nbsp-&nbsp
-                            <a href="https://github.com/ZhengYeah/">GitHub</a> &nbsp-&nbsp
-                            <a href="https://zhihu.com/people/zhengyeah">ZhiHu</a>
-                        </p>
-                    </td>
-                    <td class="profile">
-                        <a href="/images/YeZheng-profile.png"><img alt="profile photo"
-                                                                   class="hoverZoomLink"
-                                                                   src="/images/YeZheng-profile.png"
-                                                                   style="width:100%;max-width:100%;"></a>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-            <table class="table-level-2">
-                <tbody>
-                <tr>
-                    <td class="td-whole-line">
-                        <span class="heading">More Bio</span>
-                        <p>
-                            Before the above position,
-                            I received the Bachelor Degree in Mathematics from Henan University in 2020, supervised by
-                            <a href="https://maths.henu.edu.cn/info/1204/3593.htm"> Dr. Zhonghua Wang</a>.
-                        </p>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-            <table class="table-level-2">
-                <tbody>
-                <tr>
-                    <td class="td-whole-line">
-                        <span class="heading">Research</span>
-                        <span class="heading">&nbsp; &nbsp;</span>
-                        <a href="#Literature">
-                            <span class="heading-grey">Literature</span>
-                        </a>
-                        <span class="heading">&nbsp; &nbsp;</span>
-                        <a href="#Misc">
-                            <span class="heading-grey">Misc</span>
-                        </a>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-            <table class="table-level-2">
-                <tbody>
+<div class="layout-level-1">
 
-                <!--Followings are paper entries-->
-                <tr>
-                    <td class="td-whole-line">
-                        <a href="https://doi.org/10.1145/3540250.3558924">
-                            <span class="paper-title">
-                                MpBP: verifying robustness of neural networks with multi-path bound propagation
-                            </span>
-                        </a>
-                        <br>
-                        <strong>Ye Zheng</strong>, Jiaxiang Liu, Xiaomu Shi
-                        <br>
-                        Proceedings of the 30th ACM Joint European Software Engineering Conference and Symposium on the
-                        Foundations of Software Engineering <em><strong>(ESEC/FSE Demonstration)</strong></em>, 2022
-                        <br>
-                        <a href="https://github.com/ZhengYeah/MpBP">[Code]</a> &nbsp;&nbsp;
-                        <a href="/data/mpbp-slides.pdf">[Slides]</a>
-                        <p></p>
-                        <p>
-                            MpBP (Multipath Bound Propagation) extends classical bound propagation methods with multiple
-                            propagation paths.
-                            Multiple propagation paths provides multiple pairs of bounds for a DNN, enabling tighter
-                            bounds.
-                            MpBP is based on the widely-used PyTorch machine learning framework, and paths are
-                            parallelized to provide efficient verification on GPUs.
-                        </p>
-                    </td>
-                </tr>
+    <!--Beginning of the contents-->
+    <div class="layout-level-2">
+        <div class="mobile-profile">
+            <img id="showing-mobile-profile" alt="profile photo" src="./images/profile/profile-img.jpg">
+        </div>
+        <div id="pc-bio-profile">
+            <div class="bio">
+                <div>
+                  I'm a 2nd year Ph.D. student at Binghamton University.
+                </div>
+                <div>
 
-                <tr>
-                    <td class="td-whole-line">
-                        <a href="https://doi.org/10.21655/ijsi.1673-7288.00281">
-                            <span class="paper-title">Multi-path Back-propagation Method for Neural Network Verification</span>
-                        </a>(Translated into English)
-                        <br>
-                        <strong>Ye Zheng</strong>, Xiaomu Shi, Jiaxiang Liu
-                        <br>
-                        International Journal of Software and Informatics <em><strong>(IJSI)</strong></em>, 2022
-                        <br>
-                        <a href="https://github.com/ZhengYeah/AbstraCMP">[Code]</a> &nbsp;&nbsp;
-                        <a href="/data/abstracmp-slides.pdf">[Slides]</a>
-                        <p></p>
-                        <p>
-                            This paper proposes the concept of back-propagation path for back-propagation methods. Under
-                            this concept, the existing
-                            back-propagation methods can be regarded as only using a single back-propagation path,
-                            which is a special case of the proposed concept.
-                            The verification accuracy of back-propagation methods can be improved significantly by using
-                            multiple back-propagation paths.
-                        </p>
-                    </td>
-                </tr>
+                </div>
+                <div>
+                    <a href="#">CV</a>&nbsp-&nbsp
+                    <a href="#">Google Scholar</a>&nbsp-&nbsp
+                    <a href="#">GitHub</a>&nbsp-&nbsp
+                    <a href="#">LinkedIn</a>
 
-                <tr>
-                    <td class="td-whole-line">
-                        <a href="https://dx.doi.org/10.13328/j.cnki.jos.006585">
-                            <span class="paper-title">基于多路径回溯的神经网络验证方法</span>
-                        </a>
-                        <br>
-                        <strong>郑烨</strong>，施晓牧，刘嘉祥
-                        <br>
-                        软件学报 <em><strong>(JOS)</strong></em>, 2022
-                        <br>
-                        <a href="https://github.com/ZhengYeah/AbstraCMP">[Code]</a>&nbsp;&nbsp;
-                        <a href="/data/abstracmp-slides.pdf">[Slides]</a>
-                        <p></p>
-                        <p>
-                            本文提出多路径回溯的概念，在此概念下，现有的回溯验证方法可看作仅使用单条回溯路径计算每个神经网络节点的上下界，是这一概念的特例。
-                            使用多条回溯路径可以有效改善这类方法的精度。
-                        </p>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+                </div>
+            </div>
+            <div class="profile">
+                <img id="showing-profile" alt="profile photo" src="./images/profile/profile-img.jpg">
+            </div>
+        </div>
+    </div>
+
+<!--
+    <div id="category-more-bio" class="layout-level-2">
+        <div class="heading">More Bio</div>
+        <div class="bio-list">
+            <div class="paper-entry">
+                <span>Shenzhen University (M.E. degree in Software Engineering, 2023)</span>
+                <ul>
+                    <li>Research areas: neural network verification and formal verification, advised
+                        by <a href="https://csse.szu.edu.cn/pages/user/index?id=1031">Dr. Jiaxiang Liu</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="paper-entry">
+                <span>Henan University (B.E. degree in Mathematics, 2020)</span>
+                <ul>
+                    <li>Majored in pure mathematics, advised by
+                        <a href="https://maths.henu.edu.cn/info/1204/3593.htm"> Dr. Zhonghua Wang</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+-->
+
+    <div id="category-publications" class="layout-level-2">
+        <div class="heading">Publications</div>
+        <div class="publications-list">
+          <!--
+            <div class="paper-entry">
+                <a class="paper-title" href="https://doi.org/10.1145/3540250.3558924">
+                    MpBP: Verifying Robustness of Neural Networks with Multi-path Bound Propagation</a>&nbsp;&nbsp;
+                <a class="button-links" href="https://github.com/ZhengYeah/MpBP">Code</a>&nbsp;&nbsp;
+                <a class="button-links" href="/data/mpbp-slides.pdf">Slides</a>
+                <p>
+                <strong>Ye Zheng</strong>, Jiaxiang Liu, Xiaomu Shi
+                <br>
+                Proceedings of the 30th ACM Joint European Software Engineering Conference and Symposium on the
+                Foundations of Software Engineering <em><strong>(ESEC/FSE Demonstration)</strong></em>, 2022
+                </p>
+            </div>
+          -->
+          <!--
+            <div class="paper-entry">
+                <a class="paper-title" href="https://dx.doi.org/10.13328/j.cnki.jos.006585">
+                    基于多路径回溯的神经网络验证方法</a>
+                <strong>and the English version</strong>
+                <a class="paper-title" href="https://doi.org/10.21655/ijsi.1673-7288.00281">
+                        Multi-path Back-propagation Method for Neural Network Verification</a>&nbsp;&nbsp;
+                <a class="button-links" href="https://github.com/ZhengYeah/AbstraCMP">Code</a>&nbsp;&nbsp;
+                <a class="button-links" href="/data/abstracmp-slides.pdf">Slides</a>
+                <p>
+                <strong>郑烨</strong>，施晓牧，刘嘉祥
+                <br>
+                软件学报 <em><strong>(JOS)</strong></em>, 2022; International Journal of Software and Informatics
+                <em><strong>(IJSI)</strong></em>, 2022
+                </p>
+            </div>
+          -->
+        </div>
+    </div>
 
 
+<!--
+    <div id="category-writings" class="layout-level-2">
+        <div class="heading">Writings</div>
+        <div class="writings-list">
+            <div class="paper-entry">
+                <a href="https://github.com/ZhengYeah/PaperComments-of-DP">
+                    <span class="paper-title">Paper Comments in Differential Privacy</span>
+                </a>
+                <p>
+                    A personal comments of papers in Differential Privacy, organized by publication
+                    year and conference / journal name.
+                </p>
+            </div>
+        </div>
+        <div class="paper-entry highlight-entry">
+            <a href="https://www.zhihu.com/people/zhengyeah/columns">
+                <span class="paper-title">文学评论、阅读笔记、随笔文集</span>
+            </a>
+            <p>
+                关于人文学科的内容，维护于知乎平台。包括对一些长篇小说的分析与主观评论、一些书籍的阅读笔记、以及一些随笔。
+                除此之外，也包括一些关于其他领域问题的回答。
+            </p>
+        </div>
+    </div>
+-->
 
-            <table class="table-level-2">
-                <tbody>
-                <tr>
-                    <td class="td-whole-line">
-                        <span class="heading" id="Misc">Misc</span>
-                    </td>
-                </tr>
-                <!--Followings are Misc entries-->
 
-                <tr>
-                    <td class="td-whole-line">
-                        <a href="https://github.com/ZhengYeah/PaperRank-of-NNVerification">
-                            <span class="paper-title">PaperRank-of-NNVerification</span>
-                        </a>
-                        <p>
-                            A personal ranking of papers in Neural Network Verification, organized by the publication
-                            year.
-                            I use "+++" as the maximum score, meaning I think the paper had an iconic contribution to
-                            this area.
-                            Such papers are selected and listed in the README file.
-                        </p>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+<!--    <div id="category-awards" class="layout-level-2">-->
+<!--        <div class="heading">Awards</div>-->
+<!--        <div class="awards-list">-->
+<!--            <div class="paper-entry">-->
+<!--                <span>Shenzhen University (2020 - 2023)</span>-->
+<!--                <ul>-->
+<!--                    <li>Outstanding Graduate of Shenzhen University, 2023</li>-->
+<!--                    <li>First prize, Academic Scholarship of Shenzhen University (top 15% students), 2022</li>-->
+<!--                    <li>National Merit Scholarship, Ministry of Education, China, 2022</li>-->
+<!--                    <li>First prize, Academic Scholarship of Shenzhen University (top 15% students), 2020</li>-->
+<!--                </ul>-->
+<!--            </div>-->
 
-            <!--Footer-->
-            <table class="table-level-2">
-                <tbody>
-                <tr>
-                    <td style="padding:0">
-                        <br>
-                        <p style="text-align:center;font-size:small;">
-                            Last update: March 2023. &nbsp;&nbsp;&nbsp;&nbsp;--
-                            Thanks for your browsing.
-                            Here is the <a href="https://github.com/ZhengYeah/ZhengYeah.github.io"
-                                           style="font-size:small">source code</a> to
-                            this website. Feel free to clone them for your own personal use.
-                        </p>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+<!--            <div class="paper-entry">-->
+<!--                <span>Henan University (2016 - 2020)</span>-->
+<!--                <ul>-->
+<!--                    <li>First prize, English Vocabulary Contest of Henan University, 2017</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
-        </td>
-    </tr>
-    </tbody>
-</table>
+<!--
+
+    <div id="category-archives" class="layout-level-2">
+        <div class="heading">Archives</div>
+        <div class="archives-list">
+            <div class="paper-entry highlight-entry">
+                <a class="paper-title" href="./data/硕士学位论文.pdf">
+                    硕士学位论文《多路径方法在神经网络验证中的研究与应用》</a>&nbsp;
+                <a class="button-links" href="./data/硕士学位论文.pdf">PDF</a>&nbsp;&nbsp;
+                <a class="button-links" href="./data/硕士学位论文-slides.pdf">Slides</a>
+                <p>
+                    本文关注神经网络验证方法中界限传播方法的精度问题。关于此问题，本文提出界限传播路径的概念，
+                    将各种界限传播方法扩展到其对应的多路径界限传播方法；此外，本文将多路径界限传播在 PyTorch 框架上并行化，
+                    开发了高效而易用的鲁棒性验证工具。
+                </p>
+            </div>
+            <div class="paper-entry">
+                <a class="paper-title" href="https://github.com/ZhengYeah/PY-Toolbox">
+                    Python Script Tools Collection</a>
+                <p>
+                     Collection of simple python script tools in daily usage (such as file and Excel operations).
+                </p>
+            </div>
+        </div>
+    </div>
+-->
+
+</div>
+<div id="footer">
+    <hr class="split-line">
+    <div class="footer-box">
+        <div class="footer-left">
+            Last update: July 2023
+        </div>
+        <div class="footer-right">
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
-
-</html>
