@@ -185,6 +185,10 @@ body {
     display: flex;
     flex-direction: column;
     height: 200px;
+    width: 200px;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1;
     justify-content: space-around;
 }
 
