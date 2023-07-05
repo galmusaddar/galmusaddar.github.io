@@ -321,8 +321,7 @@ body {
     margin: auto;
     padding: 10px 0 20px;
     font-size: 12px;
-    color: #add8e6;
-    font-color: black;
+    color: lightgrey;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
