@@ -25,7 +25,8 @@ body {
     top: 0;
     overflow: hidden;
     width: 100%;
-    background-color: #F5F5F5;
+    /*background-color: #F5F5F5;*/
+    background-color: #0389ff;
     transition: 0.3s;
     font-size: 20px;
 }
@@ -48,6 +49,7 @@ body {
 
 .my-name {
     font-weight: bold;
+    font-size: 24px;
 }
 
 .link-collection ul {
