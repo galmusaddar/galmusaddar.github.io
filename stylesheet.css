@@ -28,7 +28,7 @@ body {
     /*background-color: #F5F5F5;*/
     background-color: #add8e6;
     transition: 0.3s;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .navigation-bar {
@@ -303,7 +303,7 @@ body {
 /******************** footer ********************/
 
 #footer {
-    background-color: #F5F5F5;
+    background-color: #add8e6;
     margin-top: 40px;
 }
 
